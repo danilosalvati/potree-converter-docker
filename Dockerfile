@@ -1,13 +1,11 @@
 
 # Instructions: https://github.com/chrvadala/potree-converter-docker.git
 
-FROM ubuntu:15.04
+FROM ubuntu:17.10
 MAINTAINER cvdlab
 VOLUME ["/input", "/output"]
 
 RUN apt-get update && apt-get install -y \
-libtiff-dev libgeotiff-dev libgdal1-dev \
-libboost-system-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-regex-dev libboost-iostreams-dev \
 git cmake build-essential wget
 
 WORKDIR /opt
